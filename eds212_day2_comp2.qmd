@@ -1,0 +1,16 @@
+---
+title: "eds212_day2_comp2"
+---
+
+## Day 2 Computer Session 2
+
+## Derivatives pt. 2
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r}
+
+```
