@@ -11,6 +11,14 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
+## Plotting functions in ggplot2
+
 ```{r}
+fx = function(x) {3 * x ^ 2 + 4}
+
+ggplot(data.frame(x = c(1, 100)), aes(x = x)) + 
+  stat_function(fun = fx)
+
+
 
 ```
