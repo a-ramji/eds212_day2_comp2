@@ -16,9 +16,32 @@ library(palmerpenguins)
 ```{r}
 fx = function(x) {3 * x ^ 2 + 4}
 
+#c is concatenate, vector of 2 values
+#aes ( x = x ) mapping values of x to the values stored in this c frame
+# "fun" is where you put what function you're graphing
+# ggplot(data = df,...)
+#c just puts the 2 values (1, 100) into a vector bc fun is just looking for endpoints ( 1 and 100) 
+# you can also do seq() but this version is shorter because you only need endpoints
+
 ggplot(data.frame(x = c(1, 100)), aes(x = x)) + 
   stat_function(fun = fx)
 
 
+
+```
+
+## Partial Derivative
+
+```{r}
+fxyz = expression(2 * x * y + 3 * (x ^ 2) * (z ^ 3))
+
+dfdy = D(fxyz, 'y')
+
+#dfdy
+```
+
+## Penguin ggplot
+
+```{r}
 
 ```
