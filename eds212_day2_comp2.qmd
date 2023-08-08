@@ -40,8 +40,25 @@ dfdy = D(fxyz, 'y')
 #dfdy
 ```
 
-## Penguin ggplot
+## Penguins plot
 
 ```{r}
+# view(penguins) in console!
+
+# anything set to a constant should be outside of aes, anything set to a variable (i.e., island, species), should be within aes
+
+
+ggplot() +
+  geom_point(data = penguins, 
+             aes(x = flipper_length_mm, 
+                 y = body_mass_g,
+                 color = species)) +
+  labs(x = "Flipper length (mm)", 
+       y = "Body mass (g)",
+       title = "Palmer penguin body dimensions",
+       subtitle = "Palmer Archipelago, Antarctica (2007 - 2009)",
+       caption = "Collected by Dr. Kristen Gorman and colleages at Palmer Station LTER") + 
+  facet_wrap(~island) + 
+  theme_minimal()
 
 ```
